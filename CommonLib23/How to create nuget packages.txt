@@ -1,0 +1,14 @@
+﻿Util sentences to create a Nugget package in .NETFramework4.7.2
+
+Go to project folder and run following sentences:
+
+nuget.exe spec .\project.csproj
+nuget.exe pack -properties Configuration=Release
+nuget.exe add .\project.xxx.nupkg -Source LocalFolderForNugetsSource
+
+Example:
+
+cd C:\Users\Joan Granja\source\repos\TestingResources\CommonLib23\CommonLib23
+nuget.exe spec -Force .\CommonLib23.csproj
+nuget.exe pack -properties Configuration=Release
+nuget.exe add .\CommonLib23.1.0.0.nupkg -Source "C:\Users\Joan Granja\source\puil-nuget-feed"

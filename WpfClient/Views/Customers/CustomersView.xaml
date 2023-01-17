@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="WpfClient.Views.Customers.CustomersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfClient.Views.Customers"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border Padding="20" BorderThickness="2" BorderBrush="Gray">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="This view is created from WpfClient project and uses resources from both projects"/>
+        
+            <StackPanel Grid.Row="1" Margin="0,10,0,0" Orientation="Horizontal">
+                <TextBlock Text="Resource from WpfClient project: "/>
+                <TextBlock Margin="10,0,0,0" Text="{lex:Loc customersView_message}" FontWeight="Bold"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Margin="0,10,0,0" Orientation="Horizontal">
+                <TextBlock Text="Resource from CommonLib23 project: "/>
+                <TextBlock Margin="10,0,0,0" Text="{lex:Loc common_message1}" FontWeight="Bold"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>
